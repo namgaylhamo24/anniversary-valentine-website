@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 20 33% 96%;
+    --foreground: 345 25% 15%;
+    --card: 20 40% 97%;
+    --card-foreground: 345 25% 15%;
+    --popover: 20 40% 97%;
+    --popover-foreground: 345 25% 15%;
+    --primary: 345 40% 30%;
+    --primary-foreground: 20 33% 96%;
+    --secondary: 35 40% 88%;
+    --secondary-foreground: 345 25% 15%;
+    --muted: 20 20% 92%;
+    --muted-foreground: 345 10% 45%;
+    --accent: 35 55% 75%;
+    --accent-foreground: 345 25% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 20% 88%;
+    --input: 20 20% 88%;
+    --ring: 345 40% 30%;
+    --chart-1: 345 40% 45%;
+    --chart-2: 35 55% 60%;
+    --chart-3: 20 30% 50%;
+    --chart-4: 345 30% 60%;
+    --chart-5: 35 40% 70%;
+    --radius: 0.75rem;
+    --sidebar-background: 20 33% 96%;
+    --sidebar-foreground: 345 25% 15%;
+    --sidebar-primary: 345 40% 30%;
+    --sidebar-primary-foreground: 20 33% 96%;
+    --sidebar-accent: 35 40% 88%;
+    --sidebar-accent-foreground: 345 25% 15%;
+    --sidebar-border: 20 20% 88%;
+    --sidebar-ring: 345 40% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom selection color */
+::selection {
+  background-color: hsl(345 40% 30% / 0.3);
+  color: hsl(345 25% 15%);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(20 33% 96%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(345 40% 30% / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(345 40% 30% / 0.5);
+}
